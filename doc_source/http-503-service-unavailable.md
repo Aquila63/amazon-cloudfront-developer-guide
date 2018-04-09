@@ -42,5 +42,4 @@ This error is common when you perform load testing on your CloudFront distributi
 
 This error is received when a Lambda@Edge function that is configured on a cache behavior within your CloudFront distribution encountered an error during execution and exited before the request could be fulfilled. Typically, this can be caused by issues with the function itself that caused a runtime error.
 
-In order troubleshoot this, you must consult your Lambda function's execution logs, which will help you debug the problem. These logs will be located in a region that is closest to the Edge Location that fulfilled the request. For further information see [CloudWatch Metrics and CloudWatch Logs for Lambda Functions](CloudWatch Metrics and CloudWatch Logs for Lambda Functions
-).
+In order troubleshoot this, you must consult your Lambda function's execution logs, which will help you debug the problem. These logs will be located in a region that is closest to the Edge Location that fulfilled the request. For further information see [CloudWatch Metrics and CloudWatch Logs for Lambda Functions](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/lambda-cloudwatch-metrics-logging.html).
