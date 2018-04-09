@@ -37,3 +37,10 @@ nslookup OriginDomainName NameServerFromAbove
 You will receive this error in the rare case that CloudFront has the ability to route requests to the next best available edge location\. In rare cases, CloudFront might be unable to satisfy the request\. If this happens, contact [AWS Support](https://console.aws.amazon.com/support/home)\.
 
 This error is common when you perform load testing on your CloudFront distribution\. To avoid this, follow the [Load Testing CloudFront](load-testing.md) guidelines to avoid 503 \(Capacity Exceeded\) errors\. This type of error typically means that the edge location didn't have enough capacity at the time of the request to serve the object\.
+
+## The Lambda function associated with the CloudFront distribution is invalid or doesn't have the required permissions. 
+
+This error is received when a Lambda@Edge function that is configured on a cache behavior within your CloudFront distribution encountered an error during execution and exited before the request could be fulfilled. Typically, this can be caused by issues with the function itself that caused a runtime error.
+
+In order troubleshoot this, you must consult your Lambda function's execution logs, which will help you debug the problem. These logs will be located in a region that is closest to the Edge Location that fulfilled the request. For further information see [CloudWatch Metrics and CloudWatch Logs for Lambda Functions](CloudWatch Metrics and CloudWatch Logs for Lambda Functions
+).
